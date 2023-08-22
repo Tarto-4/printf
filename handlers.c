@@ -29,7 +29,7 @@ int prnt_s(const char *str)
  * prnt_i - handles integers to print with function
  * @num: passed integer
  * Return: integer from function
- *
+ */
 int prnt_i(int num)
 {
 	int count = 0;
@@ -42,14 +42,14 @@ int prnt_i(int num)
 	}
 	count += print_unsigned_integer(num);
 	return (count);
-}*/
+}
 
 /**
  * print_unsigned_integer - prints an unsigned integer
  * unto stdout with function printf
  * @num: integer to print out
  * Return: number passed in function
- *
+ */
 int print_unsigned_integer(unsigned int num)
 {
 	int count = 0;
@@ -58,4 +58,4 @@ int print_unsigned_integer(unsigned int num)
 		count += print_unsigned_integer(num / 10);
 	_putchar(num % 10 + '0');
 	return (count + 1);
-}*/
+}
