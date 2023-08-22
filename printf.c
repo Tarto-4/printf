@@ -1,11 +1,16 @@
 #include "main.h"
 
+/**
+ * _printf - prints a stirng according to format and given specifier
+ * @format: string
+ * Return: string
+ */
 int _printf(const char *format, ...)
 {
 	va_list arg_list;
 	int printed_chars = 0;
-	va_start(arg_list, format);
 
+	va_start(arg_list, format);
 	while (*format != '\0')
 	{
 		if (*format == '%')
@@ -21,7 +26,7 @@ int _printf(const char *format, ...)
 					printed_chars += prnt_s(va_arg(arg_list, char*));
 					break;
 				case 'd':
-				case 'i':	
+				case 'i':
 					printed_chars += prnt_i(va_arg(arg_list, int));
 					printed_chars++;
 					break;
