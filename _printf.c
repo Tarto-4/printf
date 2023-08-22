@@ -33,11 +33,13 @@ char_print++;
 else if (*format == 's')
 {
 char *str = va_arg(list_args, char*);
-while (*str)
+int len = 0;
+while (*str[len] != '\0')
 {
+	len++
+}
 write(1, str, 1);
-str++;
-char_print++;
+char_print += len;
 }
 }
 }
