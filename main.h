@@ -1,20 +1,14 @@
 #ifndef MAIN_H
 #define MAIN_H
 
+#include <stdarg.h>
+#include <string.h>
+#include <unistd.h>
 
 int _printf(const char *format, ...);
-void someOtherFunction();
-
-#define MAX_VALUE 100
-
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <unistd.h>
-#include <string.h>
-
+int prnt_s(const char *str);
+int prnt_i(int num);
+int prnt_c(char c);
+int _putchar(char c);
+int print_unsigned_integer(unsigned int num);
 #endif
-~                                                                                                                                     
-~                                                                                                                                     
-~                                                                                                                                     
-~    
