@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * prnt_c - handles character output to print with functio printf
+ * prnt_c - handles character output to print with function printf
  * @c: character to print
  * Return: void
  */
