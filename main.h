@@ -14,4 +14,5 @@ int _putchar(char c);
 int print_unsigned_integer(unsigned int num);
 int print_char(va_list args);
 int print_string(va_list args);
+void prnt_s(int num);
 #endif
