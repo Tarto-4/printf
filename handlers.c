@@ -4,9 +4,9 @@
  * @c: character to print
  * Return: void
  */
-void prnt_c(char c)
+int prnt_c(char c)
 {
-	_putchar(c);
+	return (_putchar(c));
 }
 /**
  * prnt_s - handles string output to print with function  printf
@@ -57,5 +57,5 @@ int print_unsigned_integer(unsigned int num)
 	if (num / 10)
 		count += print_unsigned_integer(num / 10);
 	_putchar(num % 10 + '0');
-	return (count);
+	return (count + 1);
 }
