@@ -1,61 +1,65 @@
-#include "main.h"
+#include <stdio.h>
+#include <string.h>
+#include <limits.h>
 /**
- * prnt_c - handles character output to print with function printf
- * @c: character to print
- * Return: void
- */
-int prnt_c(char c)
+ * print_char - Prints a single character
+ * @c: The character to print
+ *
+ * Returns: The characters printed
+*/
+int print_char(char c)
 {
-	return (_putchar(c));
+return (putchar(c));
 }
 /**
- * prnt_s - handles string output to print with function  printf
- * @str: pointer to a string
- * Return: string passed in function
- */
-int prnt_s(const char *str)
+* print_string - Prints a string
+* @str: String to print
+*
+* Returns: Length of string
+*/
+int print_string(const char *str)
 {
-	int count = 0;
-
-	while (*str != '\0')
-	{
-		_putchar(*str);
-		count++;
-		str++;
-	}
-	return (count);
+int len = strlen(str);
+for (int i = 0; i < len; i++)
+{
+putchar(str[i]);
+}
+return (len);
 }
 /**
- * prnt_i - handles integers to print with function
- * @num: passed integer
- * Return: integer from function
- */
-int prnt_i(int num)
-{
-	int count = 0;
+*print_int - Prints a signed integer
+*@num: Integer to print
 
-	if (num < 0)
-	{
-		_putchar('-');
-		count++;
-		num = -num;
-	}
-	count += print_unsigned_integer(num);
-	return (count);
+*Returns: Number of characters printed
+*/
+int print_int(int num)
+{
+int count = 0;
+if (num < 0)
+{
+putchar('-');
+count++;
+num = -num;
 }
-
-/**
- * print_unsigned_integer - prints an unsigned integer
- * unto stdout with function printf
- * @num: integer to print out
- * Return: number passed in function
- */
-int print_unsigned_integer(unsigned int num)
+if (num > INT_MAX)
 {
-	int count = 0;
+printf("Number too large to print\n");
+return (count);
+}
+count += print_unsigned(num);
+return (count);
+}
+/**
+*print_unsigned - Prints an unsigned integer
+*@num: Unsigned integer to print
 
-	if (num / 10)
-		count += print_unsigned_integer(num / 10);
-	_putchar(num % 10 + '0');
-	return (count + 1);
+*Returns: Number of characters printed
+*/
+int print_unsigned(unsigned int num)
+{
+if (num / 10)
+count += print_unsigned(num / 10);
+putchar(num % 10 + '0');
+count++;
+return (count);
 }
