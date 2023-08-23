@@ -6,6 +6,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
 int _printf(const char *format, ...);
 int prnt_s(const char *str);
 int prnt_i(int num);
