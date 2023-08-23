@@ -38,7 +38,7 @@ while (*str[len] != '\0')
 {
 	len++
 }
-write(1, str, 1);
+write(1, str, len);
 char_print += len;
 }
 }
