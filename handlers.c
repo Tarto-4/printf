@@ -4,14 +4,14 @@
  * @c: character to print
  * Return: void
  */
-int prnt_c(char c)
+void prnt_c(char c)
 {
-	return (_putchar(c));
+	_putchar(c);
 }
 /**
  * prnt_s - handles string output to print with function  printf
  * @str: pointer to a string
- * Return: string passed in function
+ * Return: number of charaters printed
  */
 int prnt_s(const char *str)
 {
@@ -57,5 +57,5 @@ int print_unsigned_integer(unsigned int num)
 	if (num / 10)
 		count += print_unsigned_integer(num / 10);
 	_putchar(num % 10 + '0');
-	return (count + 1);
+	return (count);
 }
