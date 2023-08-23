@@ -11,7 +11,7 @@ int prnt_c(char c)
 /**
  * prnt_s - handles string output to print with function  printf
  * @str: pointer to a string
- * Return: number of charaters printed
+ * Return: string passed in function
  */
 int prnt_s(const char *str)
 {
